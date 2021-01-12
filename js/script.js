@@ -1,23 +1,21 @@
 "use strict"; //строго в начале скрипта
 
-console.log('arr'+"-object");
-console.log(4+ "5");
+const numberOfFilms = +prompt('Сколько фильмов Вы уже посмотрели?','');
 
-let incr=10,
-    decr=10;
-//++incr; //форма записи префиксной это до переменной, постфиксной когда после
-//--decr;
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: {},
+    privat: false
+};
 
-console.log(++incr);
-console.log(--decr);
+const a = prompt('Один из последних прсомотренных фильмов?',''),
+      b = prompt('На сколько оцените его??',''),
+      c = prompt('Один из последних прсомотренных фильмов?',''),
+      d = prompt('На сколько оцените его??','');
 
-console.log(5%2);
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-console.log(2*4===8);
-
-
-const isChecked=true,
-      isClose=true;
-console.log(isChecked&&isClose);
-
-
+console.log(personalMovieDB);
